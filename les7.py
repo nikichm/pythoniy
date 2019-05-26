@@ -76,7 +76,8 @@ class card(list):
                         j = " "
                         z+=1
             if z == 27:
-                print("Выййграл компьютер")
+                print("Вы выйграли")
+                sys.exit()
 
 
 
@@ -86,7 +87,8 @@ class card(list):
                     if j == " ":
                         x+=1
             if x == 27:
-                print("Выййграл компьютер")
+                print("Выйграл компьютер")
+                sys.exit()
 
 
 
