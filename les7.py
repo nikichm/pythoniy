@@ -41,7 +41,7 @@ class card(list):
     def game(self):
         while True:
             box = random.randint(1, 90)
-            print("Выпал бочонок", box)
+            print("Выпал бочонок ", box)
             c = input(" Зачеркнуть или продолжить? Y/N, выйти 0 ")
             if c == "Y":
                 y = 0
@@ -69,11 +69,26 @@ class card(list):
             elif c != "0" and c != "N" and c != "Y":
                 print("Неверный ввод. Еще раз выберети из пункта меню")
 
-
-            for i in self.modules_b:
+            z = 0
+            for i in self.modules_p:
                 for j in i:
                     if j == box:
                         j = " "
+                        z+=1
+            if z == 27:
+                print("Выййграл компьютер")
+
+
+
+            x = 0
+            for i in self.modules_b:
+                for j in i:
+                    if j == " ":
+                        x+=1
+            if x == 27:
+                print("Выййграл компьютер")
+
+
 
 
 
